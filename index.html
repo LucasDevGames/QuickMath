@@ -101,6 +101,66 @@ p span {
 	margin-top: 40px;
 }
 
+.dropbtn {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    width: 160px;
+    height: 65px;
+}
+.dropbtn:hover {
+	background-color:#5cbf2a;
+}
+.dropbtn:active {
+	position:relative;
+	top:1px;
+}
+
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    min-height: 10px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}	
+	
 </style>
 	<body>
 		<div class="container">
@@ -127,6 +187,27 @@ p span {
 	</body>
 <script>
 
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}	
+	
 var startButton = document.getElementById("start");
 var stopButton = document.getElementById("stop");
 var inputField = document.getElementById("in");
@@ -258,6 +339,21 @@ var getCategory = function(mean) {
 };
 
 </script>
+<h4>
+  Click stop when you think you are done.
+  </h3>
 <p class="credits"> MADE BY LUCAS</p>
+	
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">RANKING</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="">A+ = Aweseome</a>
+    <a href="">A = Good</a>
+    <a href="">B = Ok</a>
+    <a href="">C = Not The Best</a>
+    <a href="">D = Bad</a>
+    <a href="">F = Needs Work</a>
+  </div>
+</div>
 
 </html>
