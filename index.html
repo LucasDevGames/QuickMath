@@ -1,359 +1,362 @@
-  <!DOCTYPE html 
-        PUBLIC "-//W3C//DTD HTML 4.01//EN"
-        "http://www.w3.org/TR/html4/strict.dtd">
-  <html lang="en-US">
-  <head profile="http://www.w3.org/2005/10/profile">
-  <link rel="icon" 
-        type="image/png" 
-        href="https://lh3.googleusercontent.com/aLAjq15icITypeROsEVu3BOTT-hZBgLk7am_gRnPnnyapcCr1JSSxMi1iGZxLK5wjNbr=w300">
-      <head>
-          <meta charset="utf-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <title>Quick Math</title>
-          <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-      </head>
-  <style>
+<!DOCTYPE html 
+      PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" 
+      type="image/png" 
+      href="https://lh3.googleusercontent.com/aLAjq15icITypeROsEVu3BOTT-hZBgLk7am_gRnPnnyapcCr1JSSxMi1iGZxLK5wjNbr=w300">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Quick Math</title>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	</head>
+<style>
 
-  body {
-      font-family: sans-serif;
-      text-align: center;
-      color: #333;
-  }
+body {
+	font-family: sans-serif;
+	text-align: center;
+	color: #333;
+}
 
-  .credits {
-      font-size: 4em;
-      font-family: Oswald;
-      color: Gray;
-      font-style:Bold;
-  }
+.credits {
+	font-size: 4em;
+	font-family: Oswald;
+	color: Gray;
+	font-style:Bold;
+}
 
-  h1 {
-      font-size: 4em;
-  }
+h1 {
+	font-size: 4em;
+}
 
-  h2 {
-      font-size: 2em;
-  }
+h2 {
+	font-size: 2em;
+}
 
-  input {
-      font-size: 72px;
-      max-width: 100%;
-      border: none;
-      border-radius: 10px;
-      background-color: #E6E6E6;
-      text-align: center;
-  }
+input {
+	font-size: 72px;
+	max-width: 100%;
+	border: none;
+	border-radius: 10px;
+	background-color: #E6E6E6;
+	text-align: center;
+}
 
-  input:focus {
-      outline: none;
-  }
+input:focus {
+	outline: none;
+}
 
-  button {
-      display: block;
-      cursor: pointer;
-      width: 200px;
-      height: 120px;
-      color: white;
-      font-size: 22px;
-      border: 6px solid #000000;
-      border-radius: 10px;
-      margin: 0 auto;
-      margin-top: 20px;
-  }
+button {
+	display: block;
+	cursor: pointer;
+	width: 200px;
+	height: 120px;
+	color: white;
+	font-size: 22px;
+	border: 6px solid #000000;
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 160px;
+        height: 65px;
+}
 
-  p {
-      text-align: center;
-      font-size: 22px;
-  }
+p {
+	text-align: center;
+	font-size: 22px;
+}
 
-  p span {
-      font-size: 96px;
-  }
+p span {
+	font-size: 96px;
+}
 
-  .container {
-      margin: 0 auto;
-      width: 420px;
-  }
+.container {
+	margin: 0 auto;
+	width: 420px;
+}
 
-  .controls {
-      position: relative;
-      margin: 0 auto;
-      width: 270px;
-  }
+.controls {
+	position: relative;
+	margin: 0 auto;
+	width: 270px;
+}
 
-  .hide {
-      display: none; /* default value that is changed via javascript */
-  }
+.hide {
+	display: none; /* default value that is changed via javascript */
+}
 
-  #response {
-      color: #FF6666;
-  }
+#response {
+	color: #FF6666;
+}
 
-  #start {
-      background-color: #00F8A0;
-      border-color: #00F8A0;
-  }
+#start {
+	background-color: #00F8A0;
+	border-color: #00F8A0;
+}
 
-  #stop {
-      background-color: #FF6666;
-      border-color: #FF6666;
-      margin-top: 40px;
-  }
+#stop {
+	background-color: #FF6666;
+	border-color: #FF6666;
+	margin-top: 40px;
+}
 
-  .dropbtn {
-      background-color:#44c767;
-      -moz-border-radius:28px;
-      -webkit-border-radius:28px;
-      border-radius:28px;
-      border:1px solid #18ab29;
-      display:inline-block;
-      cursor:pointer;
-      color:#ffffff;
-      font-family:Verdana;
-      font-size:17px;
-      font-weight:bold;
-      padding:16px 31px;
-      text-decoration:none;
-      text-shadow:0px 1px 0px #2f6627;
-      width: 160px;
-      height: 65px;
-  }
-  .dropbtn:hover {
-      background-color:#5cbf2a;
-  }
-  .dropbtn:active {
-      position:relative;
-      top:1px;
-  }
+.dropbtn {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    width: 160px;
+    height: 65px;
+}
+.dropbtn:hover {
+	background-color:#5cbf2a;
+}
+.dropbtn:active {
+	position:relative;
+	top:1px;
+}
 
-      cursor: pointer;
-  }
+    cursor: pointer;
+}
 
-  .dropbtn:hover, .dropbtn:focus {
-      background-color: #3e8e41;
-  }
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
 
-  .dropdown {
-      position: relative;
-      display: inline-block;
-  }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-  .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      min-height: 10px;
-      overflow: auto;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    min-height: 10px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-  .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-  }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-  .dropdown a:hover {background-color: #f1f1f1}
+.dropdown a:hover {background-color: #f1f1f1}
 
-  .show {display:block;}	
+.show {display:block;}	
+	
+</style>
+	<body>
+		<div class="container">
+			<h1>Quick Math</h1>
+			<h2>How fast are you?</h2>
+<h4>
+  Click enter to submit your answer
+          </h4>
+			<p>
+				<span id="p"></span> <span id="op"></span> <span id="q"></span>
+			</p>
+			<p id="response"></p>
+			<p id="results"></p>
+			<p id="category"></p>
+			<div class="controls">
+				<form>
+					<input type="text" name="answer" id="in" autocomplete="off">
+				</form>
+				<button id="start">START</button>
+				<button id="stop">STOP</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/math.js"></script>
+	</body>
+<script>
 
-  </style>
-      <body>
-          <div class="container">
-              <h1>Quick Math</h1>
-              <h2>How fast are you?</h2>
-  <h4>
-    Click enter to submit your answer
-            </h4>
-              <p>
-                  <span id="p"></span> <span id="op"></span> <span id="q"></span>
-              </p>
-              <p id="response"></p>
-              <p id="results"></p>
-              <p id="category"></p>
-              <div class="controls">
-                  <form>
-                      <input type="text" name="answer" id="in" autocomplete="off">
-                  </form>
-                  <button id="start">START</button>
-                  <button id="stop">STOP</button>
-              </div>
-          </div>
-          <script type="text/javascript" src="js/math.js"></script>
-      </body>
-  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-  /* When the user clicks on the button, 
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-  }
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
-  }	
+  }
+}	
+	
+var startButton = document.getElementById("start");
+var stopButton = document.getElementById("stop");
+var inputField = document.getElementById("in");
+var form = document.querySelector("form");
+var p = document.getElementById("p");
+var q = document.getElementById("q");
+var op = document.getElementById("op");
+var response = document.getElementById("response"); // used for Try Again text
+var results = document.getElementById("results");
+var category = document.getElementById("category");
 
-  var startButton = document.getElementById("start");
-  var stopButton = document.getElementById("stop");
-  var inputField = document.getElementById("in");
-  var form = document.querySelector("form");
-  var p = document.getElementById("p");
-  var q = document.getElementById("q");
-  var op = document.getElementById("op");
-  var response = document.getElementById("response"); // used for Try Again text
-  var results = document.getElementById("results");
-  var category = document.getElementById("category");
+/***** STATE VARIABLES *****/
+var max = 20;
+var num1;
+var num2;
+var answer;
 
-  /***** STATE VARIABLES *****/
-  var max = 20;
-  var num1;
-  var num2;
-  var answer;
+var startTime;
+var endTime;
 
-  var startTime;
-  var endTime;
+var count; // number of correct answers
+var times = [];
 
-  var count; // number of correct answers
-  var times = [];
+/***** INITIALIZING *****/
+inputField.className = "hide";
+stopButton.className = "hide";
 
-  /***** INITIALIZING *****/
-  inputField.className = "hide";
-  stopButton.className = "hide";
+/***** EVENTS *****/
+startButton.onclick = function() {
+	// initializing the count
+	count = 0;
+	times = [];
+	results.innerHTML = ""; // clear results
+	category.innerHTML = ""; // clear category
+	refreshNums();
+	inputField.className = ""; // show the input field
+	stopButton.className = ""; // show the stop button
+	startButton.className = "hide"; // hide the start button
+	inputField.focus();
+};
 
-  /***** EVENTS *****/
-  startButton.onclick = function() {
-      // initializing the count
-      count = 0;
-      times = [];
-      results.innerHTML = ""; // clear results
-      category.innerHTML = ""; // clear category
-      refreshNums();
-      inputField.className = ""; // show the input field
-      stopButton.className = ""; // show the stop button
-      startButton.className = "hide"; // hide the start button
-      inputField.focus();
-  };
+form.onsubmit = function(e) {
+	// need to prevent the default form submission wich reloads the page
+	e.preventDefault();
+	getAnswer();
+};
 
-  form.onsubmit = function(e) {
-      // need to prevent the default form submission wich reloads the page
-      e.preventDefault();
-      getAnswer();
-  };
+stopButton.onclick = function() {
+	var resultString;
+	var categoryString;
+	if (times.length > 0) {
+		// getting mean time
+		var total = 0;
+		for (var i = 0; i < times.length; i++) {
+			total += times[i];
+		}
+		var mean = (total / times.length) / 1000;
+		resultString = "Average time: " + mean.toPrecision(4) + " sec";
+		categoryString = getCategory(mean);
+	} else {
+		resultString = "No results recorded. Hit the Enter key to submit your answers.";
+		categoryString = "";
+	}
 
-  stopButton.onclick = function() {
-      var resultString;
-      var categoryString;
-      if (times.length > 0) {
-          // getting mean time
-          var total = 0;
-          for (var i = 0; i < times.length; i++) {
-              total += times[i];
-          }
-          var mean = (total / times.length) / 1000;
-          resultString = "Average time: " + mean.toPrecision(4) + " sec";
-          categoryString = getCategory(mean);
-      } else {
-          resultString = "No results recorded. Hit the Enter key to submit your answers.";
-          categoryString = "";
-      }
+	inputField.className = "hide"; // hide the input field
+	stopButton.className = "hide"; // hide the stop button
+	startButton.className = ""; // show the start button
 
-      inputField.className = "hide"; // hide the input field
-      stopButton.className = "hide"; // hide the stop button
-      startButton.className = ""; // show the start button
+	// clear numbers and present results
+	p.innerHTML = "";
+	q.innerHTML = "";
+	op.innerHTML = "";
+	response.innerHTML = ""; // clear response in case it was set
+	results.innerHTML = resultString;
+	category.innerHTML = categoryString;
+};
 
-      // clear numbers and present results
-      p.innerHTML = "";
-      q.innerHTML = "";
-      op.innerHTML = "";
-      response.innerHTML = ""; // clear response in case it was set
-      results.innerHTML = resultString;
-      category.innerHTML = categoryString;
-  };
+/***** FUNCTIONS ******/
+var refreshNums = function() {
+	// Getting some random numbers
+	num1 = Math.floor((Math.random() * max) + 1);
+	num2 = Math.floor((Math.random() * max) + 1);
+	// Printing numbers to user
+	p.innerHTML = num1;
+	op.innerHTML = "+";
+	q.innerHTML = num2;
+	// Starting timer
+	startTime = new Date();
+};
 
-  /***** FUNCTIONS ******/
-  var refreshNums = function() {
-      // Getting some random numbers
-      num1 = Math.floor((Math.random() * max) + 1);
-      num2 = Math.floor((Math.random() * max) + 1);
-      // Printing numbers to user
-      p.innerHTML = num1;
-      op.innerHTML = "+";
-      q.innerHTML = num2;
-      // Starting timer
-      startTime = new Date();
-  };
+/*
+* This is called in the onsubmit event
+*/
+var getAnswer = function() {
+	var correct = num1 + num2;
+	// Getting the users attempt
+	answer = parseInt(inputField.value);
 
-  /*
-  * This is called in the onsubmit event
-  */
-  var getAnswer = function() {
-      var correct = num1 + num2;
-      // Getting the users attempt
-      answer = parseInt(inputField.value);
+	if (answer === correct) {
+		// Stopping the timer and adding the time to the times array
+		endTime = new Date();
+		times[count++] = endTime.getTime() - startTime.getTime();
+		// the answer was correct, so no need for "Try Again"
+		response.innerHTML = "";
+		refreshNums();
+	} else {
+		response.innerHTML = "Try Again";
+	}
+	// clear the input field for the next round
+	inputField.value = "";
+};
 
-      if (answer === correct) {
-          // Stopping the timer and adding the time to the times array
-          endTime = new Date();
-          times[count++] = endTime.getTime() - startTime.getTime();
-          // the answer was correct, so no need for "Try Again"
-          response.innerHTML = "";
-          refreshNums();
-      } else {
-          response.innerHTML = "Try Again";
-      }
-      // clear the input field for the next round
-      inputField.value = "";
-  };
+var getCategory = function(mean) {
+	var c;
+	if (mean < 2) {
+		c = "A+";
+	} else if (mean < 10) {
+		c = "A";
+	} else if (mean < 7) {
+		c = "B";
+	} else if (mean < 5) {
+		c = "C";
+    } else if (mean < 3) {
+		c = "D";
+    } else if (mean < 1) {
 
-  var getCategory = function(mean) {
-      var c;
-      if (mean < 2) {
-          c = "A+";
-      } else if (mean < 10) {
-          c = "A";
-      } else if (mean < 7) {
-          c = "B";
-      } else if (mean < 5) {
-          c = "C";
-      } else if (mean < 3) {
-          c = "D";
-      } else if (mean < 1) {
+	}
+	return c;
+};
 
-      }
-      return c;
-  };
+/* COPY RIGHT LUCASGAMER213 */
 
-  </script>
-  <h4>
-    Click stop when you think you are done.
-    </h3>
-  <p class="credits"> MADE BY LUCAS</p>
-
-  <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">RANKING</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="">A+ = Aweseome</a>
-      <a href="">A = Good</a>
-      <a href="">B = Ok</a>
-      <a href="">C = Not The Best</a>
-      <a href="">D = Bad</a>
-      <a href="">F = Needs Work</a>
-    </div>
+</script>
+<h4>
+  Click stop when you think you are done.
+  </h4>
+<p class="credits"> MADE BY LUCAS</p>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">RANKING</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="">A+ = Aweseome</a>
+    <a href="">A = Good</a>
+    <a href="">B = Ok</a>
+    <a href="">C = Not The Best</a>
+    <a href="">D = Bad</a>
+    <a href="">F = Needs Work</a>
   </div>
-
+</div>
+  </head>
   </html>
